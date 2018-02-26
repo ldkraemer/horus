@@ -47,6 +47,13 @@ sudo apt-get install python-wxgtk3.0
 sudo apt-get remove python-opencv
 sudo apt-get autoremove
 ```
+*NOTE*: Before adding the ppa:bqlabs/horus, check Debian's /etc/apt/ subdirectory for sources.list.d
+If it exists, the proper command will become "sudo add-apt-repository -y ppa:bqlabs/horus"
+Edit the /etc/apt/sources.list.d/bqlabs-horus-jessie.list file to contain:
+deb http://ppa.launchpad.net/bqlabs/horus/ubuntu trusty main
+# deb-src http://ppa.launchpad.net/bqlabs/horus/ubuntu trusty main
+
+save the edits, and continue with sudo apt-get update
 
 ```bash
 sudo add-apt-repository ppa:bqlabs/horus
